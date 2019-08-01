@@ -2,15 +2,15 @@
     <div class="feedback">
         <div class="rating">
             <input type="radio" name="rating" id="rating-5" v-model="picked" value="Five">
-            <label for="rating-5"></label>
+            <label for="rating-5" @click="update"></label>
             <input type="radio" name="rating" id="rating-4" v-model="picked" value="Four">
-            <label for="rating-4"></label>
+            <label for="rating-4" @click="update"></label>
             <input type="radio" name="rating" id="rating-3" v-model="picked" value="Three">
-            <label for="rating-3"></label>
+            <label for="rating-3" @click="update"></label>
             <input type="radio" name="rating" id="rating-2" v-model="picked" value="Two">
-            <label for="rating-2"></label>
+            <label for="rating-2" @click="update"></label>
             <input type="radio" name="rating" id="rating-1" v-model="picked" value="One">
-            <label for="rating-1"></label>
+            <label for="rating-1" @click="update"></label>
         </div>
         <div class="emoji-wrapper">
           <div class="emoji" :class="picked">
@@ -117,6 +117,14 @@ export default {
   data() {
     return {
       picked: ''
+    }
+  },
+  ready(){
+    update();
+  },
+  methods: {
+    update() {
+      this.$emit(this.picked)
     }
   }
 }
