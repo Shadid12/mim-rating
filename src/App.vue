@@ -1,5 +1,8 @@
 <template>
-  <Rating />
+  <div>
+    <Rating />
+    <h2>Custom Stars</h2>
+  </div>
 </template>
 
 <script>
