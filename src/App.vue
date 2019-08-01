@@ -1,22 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Rating />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Rating from './components/Rating'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Rating
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
